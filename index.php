@@ -14,12 +14,11 @@ $country = $json['country'];
 echo "
 <script>
 function switchImage($var) {
-    switch ($var)
-    {
-    case "Chile":
+    switch ($var) {
+    case 'Chile':
         console.log('Es Chile Baby');
       break;
-    case "Costa Rica":
+    case 'Costa Rica':
       console.log('Es Costa Rica Baby');
       break;
     default:
