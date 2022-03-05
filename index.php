@@ -26,7 +26,7 @@ function switchImage(var) {
     }
 }
 window.onload = function() {
-    country = ". $country .";
+    country = '". $country ."';
     switchImage(country);
 }
 </script>
