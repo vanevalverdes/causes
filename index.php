@@ -11,6 +11,20 @@ curl_close($cURLConnection);
 
 $json = json_decode($list, true);
 $country = $json['country'];
+
+if($country == "Costa Rica")
+    echo '<style>#costarica { display:block;}</style>';
+}elseif($country == "Honduras"){
+    echo '<style>#honduras { display:block;}</style>';
+}elseif($country == "Guatemala"){
+    echo '<style>#guatemala { display:block;}</style>';
+}elseif($country == "Nicaragua"){
+    echo '<style>#nicaragua { display:block;}</style>';
+}else{
+    echo '<style>#costarica { display:block;}</style>';
+};
+
+/*
 echo "
 <!DOCTYPE html>
 <html>
@@ -38,5 +52,5 @@ window.onload = function() {
 </html> 
 
 
-"
+" */
 ?>
