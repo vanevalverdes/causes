@@ -1,6 +1,6 @@
 Imprime: 
 <?php
- $ip='94.219.40.96';
+ $ip='201.219.234.74';
  print(geoCheckIP($ip));
  //Array ( [domain] => dslb-094-219-040-096.pools.arcor-ip.net [country] => DE - Germany [state] => Hessen [town] => Erzhausen )
 
@@ -14,7 +14,7 @@ Imprime:
        }
 
        //contact ip-server
-       $response=@file_get_contents('http://www.netip.de/search?query='.$ip);
+       $response=@file_get_contents('http://ip-api.com/php/'.$ip);
        if (empty($response))
        {
                throw new InvalidArgumentException("Error contacting Geo-IP-Server");
