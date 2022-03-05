@@ -13,8 +13,7 @@ $json = json_decode($list, true);
 $country = $json['country'];
 echo "
 <script>
-function switchImage($var) {
-    switch ($var) {
+window.onload = switch (". $country .") {
     case 'Chile':
         console.log('Es Chile Baby');
       break;
@@ -24,8 +23,7 @@ function switchImage($var) {
     default:
         console.log('Es lo que sea Baby');
     }
-}
-window.onload = switchImage(". $country .")
+
 </script>
 "
 ?>
