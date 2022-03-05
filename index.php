@@ -12,6 +12,12 @@ curl_close($cURLConnection);
 $json = json_decode($list, true);
 $country = $json['country'];
 echo "
+<!DOCTYPE html>
+<html>
+<body>
+
+". $ipaddress ."
+
 <script>
 
 window.onload = function() {
@@ -28,5 +34,9 @@ window.onload = function() {
         };
 }
 </script>
+</body>
+</html> 
+
+
 "
 ?>
