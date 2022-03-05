@@ -13,21 +13,19 @@ $json = json_decode($list, true);
 $country = $json['country'];
 echo "
 <script>
-function switchImage(var) {
-    switch (var) {
-    case 'Chile':
-        console.log('Es Chile Baby');
-      break;
-    case 'Costa Rica':
-      console.log('Es Costa Rica Baby');
-      break;
-    default:
-        console.log('Es lo que sea Baby');
-    }
-}
+
 window.onload = function() {
     country = '". $country ."';
-    switchImage(country);
+    switch(country) {
+        case 'Chile':
+            console.log('Es Chile Baby');
+          break;
+        case 'Costa Rica':
+          console.log('Es Costa Rica Baby');
+          break;
+        default:
+            console.log('Es lo que sea Baby');
+        };
 }
 </script>
 "
