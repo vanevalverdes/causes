@@ -4,6 +4,7 @@ Imprime:
 $ipaddress = getenv("REMOTE_ADDR") ;
 Echo "Your IP Address is " . $ipaddress;
 $cURLConnection = curl_init();
+
 curl_setopt($cURLConnection, CURLOPT_URL, 'http://ip-api.com/json/'. $ipaddress 'fields=country');
 curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
 
