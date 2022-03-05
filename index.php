@@ -1,8 +1,6 @@
-Imprime: 
 <?php
 
 $ipaddress = getenv("REMOTE_ADDR") ;
-Echo "Your IP Address is " . $ipaddress;
 $cURLConnection = curl_init();
 
 curl_setopt($cURLConnection, CURLOPT_URL, 'http://ip-api.com/json/'. $ipaddress .'?fields=country');
@@ -13,5 +11,22 @@ curl_close($cURLConnection);
 
 $json = json_decode($list, true);
 $country = $json['country'];
-var_dump($country)
+echo "
+<script>
+function switchImage($var) {
+    switch ($var)
+    {
+    case "Chile":
+        console.log('Es Chile Baby');
+      break;
+    case "Costa Rica":
+      console.log('Es Costa Rica Baby');
+      break;
+    default:
+        console.log('Es lo que sea Baby');
+    }
+}
+window.onload = switchImage(". $country .")
+</script>
+"
 ?>
