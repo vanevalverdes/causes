@@ -1,3 +1,4 @@
+Imprime: 
 <?php
  $ip='94.219.40.96';
  print_r(geoCheckIP($ip));
