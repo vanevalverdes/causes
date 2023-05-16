@@ -1,50 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página con Bootstrap 4</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Bootstrap 4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo:700,regular|Lato:700|Open+Sans:300,600|PT+Sans:regular&amp;subset=cyrillic,latin" media="all" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-    .container {
-      flex: 1;
-    }
+      .container {
+        flex: 1;
+      }
 
-    footer {
-      background-color: green;
-      padding: 20px;
-      color: white;
-    }
-  </style>
-</head>
-<body>
+      footer {
+        background-color: green;
+        padding: 20px;
+        color: white;
+      }
 
-  <div class="container">
-    <header style="background-color: green; padding: 20px;">
-      <h1>Encabezado</h1>
-    </header>
+      header {
+        padding: 20px 26px 15px 10px;
+        border: 20px solid #006672;
+      }
 
-    <main style="padding: 20px;">
+      .search-form {
+        background-image: none;
+        float: none;
+        border: 1px solid #d7d7d7;
+        border-top-color: rgb(215, 215, 215);
+        border-bottom-color: rgb(215, 215, 215);
+        border-top-color: #bdbdbd;
+        border-bottom-color: #f9f9f9;
+        background: #f0f0f0;
+        background: linear-gradient(to bottom, #f0f0f0 0%, #f7f7f7 31%, #fefefe 60%, #ffffff 100%);
+        border-radius: 3px;
+        height: 30px;
+        padding: 5px 5px;
+        margin: 0;
+        width: 160px;
+      }
+
+      #search-submit {
+        border: none;
+        padding: 3px 8px 3px 8px;
+        width: 30px;
+        height: 30px;
+        font-size: 0;
+        background: #01565C url(https://www.sutel.go.cr/sites/all/themes/sutel/images/default/btn_search.png) no-repeat left !important;
+        margin: 0px 5px;
+        border-radius: 0px;
+      }
+
+      a,
+      a:link,
+      a:visited {
+        color: #01565C;
+      }
+
+      .container {
+        max-width: 1186px;
+      }
+
+      #top-bar a {
+        margin: 0px 5px;
+      }
+      .navbar-nav > li > a {
+        color: #01565C;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .navbar-light .navbar-nav .nav-link {
+        color: #01565C;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+        color: #fff;
+        background-color: #007587;
+      }
+      .navbar {
+        padding: 0;
+      }
+      .custom-toggler {
+        background-color: #006672;
+        border-color: white;
+      }
+      
+      @media (min-width: 768px) { 
+        .navbar-row{justify-content: flex-end !important;display: flex;margin-top: -15px;}
+        
+       }
+      @media (max-width: 780px) { 
+        .hide-in-mobile{display: none !important;}
+        .logo-center {text-align: center;}
+       }
+    </style>
+    
+  </head>
+  <body>
+    <div class="container">
+      <header style="margin-top: 20px;">
+        <div class="row">
+          <div class=" col-12 col-md-3 logo-center">
+            <a href="/" class="logo-link">
+              <img src="https://www.sutel.go.cr/sites/all/themes/sutel/logo.png" alt="Sutel" class="logo-img">
+            </a>
+          </div>
+          <div class=" col-12 col-md-9 ">
+            <div class="row justify-content-end hide-in-mobile" id="top-bar">
+              <form action="/" method="post" >
+                <div class="input-group">
+                  <input type="text" id="edit-search-block-form--2" name="search_block_form" class="search-form" placeholder="" aria-label="">
+                  <button type="submit" id="search-submit" class="btn btn-primary">Buscar</button>
+                </div>
+              </form>
+              <a href="/user/login" style="font-size: 13px;padding-top: 10px;">Registro / Ingreso</a>
+              <a href="/" title="Ir al inicio">
+                <img alt="Ir a inicio" class="home_icon" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/home-icon.png" width="25" height="25">
+              </a>
+              <a href="/mapa-del-sitio">
+                <img alt="Mapa del sitio WEB SUTEL" class="img_sitemap" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/sitemap.png" width="25" height="25">
+              </a>
+            </div>           
+          </div>
+        </div>
+        <div class="row navbar-row" >
+          <div  class="col-6 col-md-12 navbar-row">
+            <nav class="navbar navbar-expand-md navbar-light ">
+              <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a href="https://www.sutel.go.cr" class="nav-link">INICIO</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">SUTEL <span class="caret"></span></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">A SU SERVICIO <span class="caret"></span></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">COMPETENCIA <span class="caret"></span></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">FONATEL <span class="caret"></span></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">REGISTRO TELECOMUNICACIONES <span class="caret"></span></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="col-6 d-block d-md-none justify-content-end">
+            <a href="/" title="Ir al inicio"class="float-right ml-2">
+              <img alt="Ir a inicio" class="home_icon" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/home-icon.png" width="25" height="25">
+            </a>
+            <a href="/mapa-del-sitio" class="float-right">
+              <img alt="Mapa del sitio WEB SUTEL" class="img_sitemap" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/sitemap.png" width="25" height="25">
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="container">
       <h2>Contenido Principal</h2>
       <p>Este es el contenido principal de la página.</p>
-    </main>
-  </div>
-<div class="container">
-  <footer>
-    <div class="container text-center">
-      <p>Pie de página</p>
     </div>
-  </footer>
-</div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <div class="container">
+      <footer>
+        <div class="container text-center">
+          <p>Pie de página</p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
-</body>
+  </body>
 </html>
