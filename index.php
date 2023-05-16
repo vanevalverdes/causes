@@ -1,43 +1,45 @@
-<?php
-
-$ipaddress = getenv("REMOTE_ADDR") ;
-$cURLConnection = curl_init();
-
-curl_setopt($cURLConnection, CURLOPT_URL, 'http://ip-api.com/json/'. $ipaddress .'?fields=country');
-curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
-
-$list = curl_exec($cURLConnection);
-curl_close($cURLConnection);
-
-$json = json_decode($list, true);
-$country = $json['country'];
-
-echo "
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Página con Bootstrap 4</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .header {
+      background-color: green;
+      color: white;
+      padding: 20px;
+    }
+
+    .footer {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
 <body>
+  <div class="header">
+    <h1>Encabezado</h1>
+    <p>Contenido del encabezado...</p>
+  </div>
 
-". $ipaddress ."
+  <div class="container">
+    <h2>Contenido principal</h2>
+    <p>Este es el contenido principal de la página.</p>
+  </div>
 
-<script>
+  <div class="footer">
+    <p>Pie de página</p>
+  </div>
 
-window.onload = function() {
-    country = '". $country ."';
-    switch(country) {
-        case 'Chile':
-            console.log('Es Chile Baby');
-          break;
-        case 'Costa Rica':
-          console.log('Es Costa Rica Baby');
-          break;
-        default:
-            console.log('Es lo que sea Baby');
-        };
-}
-</script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html> 
 
-
-" 
-?>
+</html>
