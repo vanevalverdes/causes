@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo:700,regular|Lato:700|Open+Sans:300,600|PT+Sans:regular&amp;subset=cyrillic,latin" media="all" />
     <style>
+      h1, h2, h3, h4, h5, h6 {
+        letter-spacing: -.05em;
+        font-family: 'Conv_MuseoSans_500', Arial;
+        font-weight: 400;
+      }
       body {
         display: flex;
         flex-direction: column;
@@ -18,11 +23,32 @@
       }
 
       footer {
-        background-color: green;
+        background-color: #006672;
         padding: 20px;
         color: white;
       }
-
+      footer .h2, footer  h2 {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      footer li {
+        list-style: none;
+        font-size: 14px;
+      }
+      footer a,
+      footer a:link,
+      footer a:visited {
+        color: #ffffff;
+      }
+      footer ul {
+        padding: 0;
+      }
+      #section-footer {
+        background-image: url(https://www.sutel.go.cr/sites/all/themes/sutel/images/default/footer.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: auto 100%;
+      }
       header {
         padding: 20px 26px 15px 10px;
         border: 20px solid #006672;
@@ -90,7 +116,11 @@
         background-color: #006672;
         border-color: white;
       }
-      
+      #footer-last {
+        background-color: #01565B;
+        padding: 20px;
+        margin: 0;
+      }
       @media (min-width: 768px) { 
         .navbar-row{justify-content: flex-end !important;display: flex;margin-top: -15px;}
         
@@ -107,23 +137,25 @@
       <header style="margin-top: 20px;">
         <div class="row">
           <div class=" col-12 col-md-3 logo-center">
-            <a href="/" class="logo-link">
+            <a href="https://www.sutel.go.cr/" class="logo-link">
               <img src="https://www.sutel.go.cr/sites/all/themes/sutel/logo.png" alt="Sutel" class="logo-img">
             </a>
           </div>
           <div class=" col-12 col-md-9 ">
             <div class="row justify-content-end hide-in-mobile" id="top-bar">
-              <form action="/" method="post" >
+              <form action="https://www.sutel.go.cr/" method="post" >
                 <div class="input-group">
                   <input type="text" id="edit-search-block-form--2" name="search_block_form" class="search-form" placeholder="" aria-label="">
-                  <button type="submit" id="search-submit" class="btn btn-primary">Buscar</button>
+                  <button type="submit" id="search-submit" name="op" class="btn btn-primary">Buscar</button>
+                  <input type="hidden" name="form_build_id" value="form-CfS0iAxivpYaTX0Irht0sF0bB6kqsCFzxCfWLuFNJgw">
+                  <input type="hidden" name="form_id" value="search_block_form">
                 </div>
               </form>
-              <a href="/user/login" style="font-size: 13px;padding-top: 10px;">Registro / Ingreso</a>
-              <a href="/" title="Ir al inicio">
+              <a href="https://www.sutel.go.cr/user/login" style="font-size: 13px;padding-top: 10px;">Registro / Ingreso</a>
+              <a href="https://www.sutel.go.cr/" title="Ir al inicio">
                 <img alt="Ir a inicio" class="home_icon" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/home-icon.png" width="25" height="25">
               </a>
-              <a href="/mapa-del-sitio">
+              <a href="https://www.sutel.go.cr/mapa-del-sitio">
                 <img alt="Mapa del sitio WEB SUTEL" class="img_sitemap" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/sitemap.png" width="25" height="25">
               </a>
             </div>           
@@ -142,29 +174,29 @@
                     <a href="https://www.sutel.go.cr" class="nav-link">INICIO</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">SUTEL <span class="caret"></span></a>
+                    <a href="https://www.sutel.go.cr" class="nav-link">SUTEL <span class="caret"></span></a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">A SU SERVICIO <span class="caret"></span></a>
+                    <a href="https://www.sutel.go.cr" class="nav-link">A SU SERVICIO <span class="caret"></span></a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">COMPETENCIA <span class="caret"></span></a>
+                    <a href="https://www.sutel.go.cr" class="nav-link">COMPETENCIA <span class="caret"></span></a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">FONATEL <span class="caret"></span></a>
+                    <a href="https://www.sutel.go.cr" class="nav-link">FONATEL <span class="caret"></span></a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">REGISTRO TELECOMUNICACIONES <span class="caret"></span></a>
+                    <a href="https://www.sutel.go.cr" class="nav-link">REGISTRO TELECOMUNICACIONES <span class="caret"></span></a>
                   </li>
                 </ul>
               </div>
             </nav>
           </div>
           <div class="col-6 d-block d-md-none justify-content-end">
-            <a href="/" title="Ir al inicio"class="float-right ml-2">
+            <a href="https://www.sutel.go.cr/" title="Ir al inicio"class="float-right ml-2">
               <img alt="Ir a inicio" class="home_icon" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/home-icon.png" width="25" height="25">
             </a>
-            <a href="/mapa-del-sitio" class="float-right">
+            <a href="https://www.sutel.go.cr/mapa-del-sitio" class="float-right">
               <img alt="Mapa del sitio WEB SUTEL" class="img_sitemap" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/sitemap.png" width="25" height="25">
             </a>
           </div>
@@ -177,11 +209,114 @@
       <p>Este es el contenido principal de la página.</p>
     </div>
     <div class="container">
-      <footer>
-        <div class="container text-center">
-          <p>Pie de página</p>
+      <footer class="section section-footer">
+        <div class="container" id="">
+          <div class="row" id="section-footer" >
+            <div class="col-sm-12 col-lg-3 pt-4">
+              <h2 class="block-title">Marco legal y regulatorio</h2>
+              <ul class="menu">
+                <li>
+                  <a href="https://www.sutel.go.cr/normativas" title="Principales Leyes y Reglamentos">Principales Leyes y Reglamentos</a>
+                </li>
+                <li>
+                  <a href="https://www.sutel.go.cr/sutel/resoluciones?field_tipo_documento_tid=All&amp;=Aplicar" title="Principales acuerdos y resoluciones">Principales acuerdos y resoluciones</a>
+                </li>
+                <li>
+                  <a href="https://www.sutel.go.cr/pagina/agenda-y-actas-del-consejo" title="Actas del Consejo">Actas del Consejo</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-12 col-lg-3 pt-4">
+              <h2 class="block-title">Información general</h2>
+              <ul class="menu">
+                <li>
+                  <a href="https://www.sutel.go.cr/informes-indicadores" title="Estadísticas Sector Telecomunicaciones">Estadísticas Sector Telecomunicaciones</a>
+                </li>
+                <li>
+                  <a href="https://www.sutel.go.cr/lista-noticias" title="Sala de Prensa">Sala de Prensa</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCGAsm6U7RqH0bHmj1Am470g" title="Canal de You Tube">Canal de You Tube</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-12 col-lg-3 pt-4">
+              <h2 class="block-title">Contacto</h2>
+              <ul class="menu">
+                <li>
+                  <span title="Tel.: 800-88 SUTEL (800-88-7-8835)" class="nolink" tabindex="0">Tel.: 800-88 SUTEL (800-88-7-8835)</span>
+                </li>
+                <li>
+                  <span title="Tel. Oficinas Centrales: 4000-0000" class="nolink" tabindex="0">Tel. Oficinas Centrales: 4000-0000</span>
+                </li>
+                <li>
+                  <span title="Fax: 2215-6821" class="nolink" tabindex="0">Fax: 2215-6821</span>
+                </li>
+                <li>
+                  <span title="Correos electrónicos:" class="nolink" tabindex="0">Correos electrónicos:</span>
+                </li>
+                <li>
+                  <span title="info@sutel.go.cr (consultas generales)" class="nolink" tabindex="0">info@sutel.go.cr (consultas generales)</span>
+                </li>
+                <li>
+                  <span title="gestiondocumental@sutel.go.cr (documentación oficial)" class="nolink" tabindex="0">gestiondocumental@sutel.go.cr (documentación oficial)</span>
+                </li>
+                <li>
+                  <span title="Dirección:" class="nolink" tabindex="0">Dirección:</span>
+                </li>
+                <li>
+                <span title="Guachipelín de Escazú,Oficentro Multipark edificio Tapantí, 3er piso" class="nolink" tabindex="0">Guachipelín de Escazú,Oficentro Multipark edificio Tapantí, 3er piso</span>
+                </li>
+                <li>
+                  <span title="Horario: L-V 8:00 a.m. a 4:00 p.m." class="nolink" tabindex="0">Horario: L-V 8:00 a.m. a 4:00 p.m.</span>
+                </li>
+                <li>
+                  <span title="Apartado postal:" class="nolink" tabindex="0">Apartado postal:</span>
+                </li>
+                <li>
+                  <span title="151-1200 San José, Costa Rica" class="nolink" tabindex="0">151-1200 San José, Costa Rica</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-12 col-lg-3 pt-4">
+              <h2 class="block-title">Términos y condiciones</h2>
+              <ul class="menu">
+                <li>
+                  <a href="https://www.sutel.go.cr/pagina/terminos-y-condiciones-de-uso" title="Términos y condiciones de uso">Términos y condiciones de uso</a>
+                </li>
+                <li>
+                  <a href="https://www.sutel.go.cr/mapa-del-sitio" title="Mapa del sitio">Mapa del sitio</a>
+                </li>
+                <li>
+                  <a href="https://www.sutel.go.cr/pagina/califique-nuestro-sitio-web-sugerencias-infosutelgocr#" title="Califique nuestro sitio WEB">Califique nuestro sitio WEB</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </footer>
+      <div class="row" id="footer-last">
+        <div class="col-sm-12 col-md-4 logo-center ">
+          <img alt="logo-link" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/logo-sutel-white.png" title="Logo Sutel" width="204" height="50">
+        </div>
+        <div class="col-md-4">
+          
+        </div>
+        <div class="col-sm-12 col-md-4 justify-content-end mt-2" style="display: flex;">
+            <a href="https://twitter.com/SUTEL_CR" target="_blank" class="mr-3">
+              <img alt="twitter" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/twitter.png" border="0">
+            </a>
+            <a href="https://www.facebook.com/SUTEL.CR" target="_blank"class="mr-3">
+              <img alt="facebook" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/facebook.png">
+            </a>
+            <a href="https://sutel.go.cr/rss.xml" target="_blank"class="mr-3">
+              <img alt="rss" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/rss.png">
+            </a>
+            <a href="https://www.youtube.com/channel/UCGAsm6U7RqH0bHmj1Am470g" target="_blank">
+              <img alt="youtube" src="https://www.sutel.go.cr/sites/all/themes/sutel/images/default/youtube.png">
+            </a>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
